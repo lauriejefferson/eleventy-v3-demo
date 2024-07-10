@@ -1,0 +1,12 @@
+<div class="flex">
+  <a href="/">Logo</a>
+  <nav class="nav">
+    <ul class="nav__list" role="list">
+      {%- for page in collections.pages %}
+      <li class="nav__list--item">
+        <a href="{{ page.page.url }}" class="nav__link">{{ page.data.title }}</a>
+      </li>
+      {% endfor -%}
+    </ul>
+  </nav>
+</div>

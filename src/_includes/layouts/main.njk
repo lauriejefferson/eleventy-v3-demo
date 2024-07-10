@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Eleventy v3 Test</title>
+  </head>
+  <body>
+    <header class="header content-grid">
+      {% include 'partials/header.njk' %}
+    </header>
+    <main class="main content-grid">
+      {% block content %}
+      {{ content | safe }}
+      {% endblock %}
+    </main>
+    <footer class="footer content-grid">
+      {% include 'partials/footer.njk' %}
+    </footer>
+  </body>
+</html>
