@@ -1,8 +1,7 @@
 ---
 layout: "layouts/page.njk"
 ---
-<section>
-    <h1 class="title">{{ title }}</h1>
+<section class="flow">
     {%- for article in collections.articles %}
     <article class="article">
       <h2 class="article__title"><a href="{{ article.url }}">{{ article.data.title }}</a></h2>

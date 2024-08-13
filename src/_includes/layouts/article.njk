@@ -2,12 +2,14 @@
 layout: "layouts/main.njk"
 ---
 
+<article class="flow">
 <h1 class="article__title">{{ title }}</h1>
-<url class="tags__list">
+<div class="tags__list">
   {%- for tag in tags %} {% if tag != 'post' %}
   <li class="tags__list-item">
     <a href="{{ '/tags/' | url }}{{ tag }}" class="tag">{{ tag }}</a>
   </li>
   {% endif %} {% endfor -%}
-</url>
+</div>
 {{ content | safe }}
+</article>

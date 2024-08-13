@@ -60,6 +60,8 @@ li {
     --spacer-1: 2rem;
     --spacer-2: 5rem;
     --spacer-3: 7rem;
+
+    --flow-space: 3rem;
 }
 
 body {
@@ -74,6 +76,10 @@ a {
 }
 
 section {
+    padding-block: var(--spacer-2);
+}
+
+article {
     padding-block: var(--spacer-2);
 }
 
@@ -102,6 +108,26 @@ section {
     align-items: center;
 }
 
+h1 {
+    --flow-space: 1rem;
+}
+
+article {
+    --flow-space: 7rem;
+}
+
+div {
+    --flow-space: 2rem;
+}
+
+p {
+    --flow-space: 1.8rem;
+}
+
+.flow>*+* {
+    padding-block: var(--flow-space, 1em);
+}
+
 .nav__list {
     display: flex;
     gap: 1em;
@@ -109,11 +135,11 @@ section {
 
 .title {
     font-size: 2rem;
-    padding-block: 1em;
 }
 
 .article__title {
     font-size: 1.25rem;
+    color: aquamarine;
 }
 
 .tags__list {
